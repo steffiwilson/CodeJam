@@ -1,0 +1,1 @@
+These are my solutions for various problems from the Google CodeJam site. The URL to each problem can be found on the first line of the java file. In general, the output of each problem should be printed to the systemout.txt file in the problem folder. 
