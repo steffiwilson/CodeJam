@@ -12,21 +12,15 @@ class storecredit {
 	
     try(BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(input)))) {
 	  int numberOfCases = Integer.parseInt(reader.readLine());
-	 //// System.out.println("Number of cases: " + numberOfCases);
 	  int currentCase = 1;
 	  while (currentCase <= numberOfCases) {
 	    int creditThisCase = Integer.parseInt(reader.readLine());
 		int itemsInStore = Integer.parseInt(reader.readLine());
 		String itemString = reader.readLine();
 		int[] itemArray = parseArray(itemString, itemsInStore);
-		
-		////System.out.println("Case #" + currentCase + ": \nI have $" + creditThisCase + " store credit. There are " + itemsInStore + " items in the store. Their values are:");
-		////printArray(itemArray);
-		////System.out.println("\nThe values in String format were: \n" + itemString + "\n\n");
-		
-		//solution returns the indices of the two items that add up to the total credit
+
+		//findPair returns the indices of the two items that add up to the total credit
 		String solution = findPair(itemArray, creditThisCase);
-		////System.out.println("\n\nThe solution for this case is " + solution + ".\n\n");
 
 		System.out.println("Case #" + currentCase + ": " + solution);
 	    currentCase++;
@@ -69,14 +63,6 @@ class storecredit {
 	  int targetValue = credit - itemArray[i];
 	  for (int j = i + 1; j < (itemArray.length); j++) {
 		if (itemArray[j] == targetValue) { //found the pair
-			////if (itemArray[j] < itemArray[i]) {
-			 ////firstItem = itemArray[j];
-			  ////secondItem = itemArray[i];
-			////}
-			////else {
-			  ////firstItem = itemArray[i];
-			  ////secondItem = itemArray[j];
-			////}
 		    return Integer.toString(i + 1) + " " + Integer.toString(j + 1); //adding 1 since my array is indexed from 0 and the answer expects indexing from 1
 		}
 	  }
