@@ -20,6 +20,7 @@ class storecredit {
 		int[] itemArray = parseArray(itemString, itemsInStore);
 
 		//findPair returns the indices of the two items that add up to the total credit
+		//findPair was made a method (rather than leaving its logic in the main method) to allow a clean break out of the nested array iterations when the solution is found
 		String solution = findPair(itemArray, creditThisCase);
 
 		System.out.println("Case #" + currentCase + ": " + solution);
@@ -50,12 +51,6 @@ class storecredit {
 	return arrayValues;
   }
 
-  public static void printArray(int[] array) {
-    for (int i = 0; i < array.length; i++) {
-	  System.out.print(array[i] + " ");
-	}
-  }
-  
   public static String findPair(int[] itemArray, int credit) {
     int firstItem = -1;
 	int secondItem = -1;
