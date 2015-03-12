@@ -3,7 +3,7 @@ import java.io.*;
 
 class T9spelling {
   public static void main(String[] args) {
-    File input = new File("C-small-practice.in");
+    File input = new File("C-large-practice.in");
     try {
       System.setOut(new PrintStream(new FileOutputStream("systemout.txt")));
       } catch (IOException ex) {
