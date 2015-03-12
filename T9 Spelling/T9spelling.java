@@ -32,14 +32,88 @@ class T9spelling {
       
       switch (currChar) {
         case 'a':
-          //stuff
+          output = output + "2";
           break;
         case 'b':
-          //stuff
+          output = output + "22";
           break;
-        //...
+        case 'c':
+          output = output + "222";
+          break;
+        case 'd':
+          output = output + "3";
+          break;
+        case 'e':
+          output = output + "33";
+          break;
+        case 'f':
+          output = output + "333";
+          break;
+        case 'g':
+          output = output + "4";
+          break;
+        case 'h';
+          output = output + "44";
+          break;
+        case 'i';
+          output = output + "444";
+          break;
+        case 'j':
+          output = output + "5";
+          break;
+        case 'k':
+          output = output + "55";
+          break;
+        case 'l':
+          output = output + "555";
+          break;
+        case 'm':
+          output = output + "6";
+          break;
+        case 'n':
+          output = output + "66";
+          break;
+        case 'o':
+          output = output + "666";
+          break;
+        case 'p':
+          output = output + "7";
+          break;
+        case 'q':
+          output = output + "77";
+          break;
+        case 'r':
+          output = output + "777";
+          break;
+        case 's':
+          output = output + "7777";
+          break;
+        case 't':
+          output = output + "8";
+          break;
+        case 'u':
+          output = output + "88";
+          break;
+        case 'v':
+          output = output + "888";
+          break;
+        case 'w':
+          output = output + "9";
+          break;
+        case 'x':
+          output = output + "99";
+          break;
+        case 'y':
+          output = output + "999";
+          break;
+        case 'z':
+          output = output + "9999";
+          break;
+        case ' ':
+          output = output + "0"
+          break;
         default: 
-          //stuff
+          //should not happen unless the input is bad
           break;
       }
     }   
