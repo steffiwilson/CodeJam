@@ -14,7 +14,9 @@ class T9spelling {
       int numberOfCases = Integer.parseInt(reader.readLine());
       int currentCase = 1;
       while (currentCase <= numberOfCases) {
-        System.out.println("Case #" + currentCase + ": " + convertToT9(reader.readLine()));
+        String currentLine = reader.readLine();
+        String currentLineConverted = convertToT9(currentLine);
+        System.out.println("Case #" + currentCase + ": " + currentLineConverted);
       }
     } catch (IOException e) {
 	  e.printStackTrace();
@@ -22,13 +24,13 @@ class T9spelling {
   }
 
   public static String convertToT9(String input) {
-    char currChar;
+    char currChar = ' ';
     char lastChar;
-    String output = '';
+    String output = "";
     for (int i = 0; i < input.length(); i++) {
-      //TODO: get currChar
-      if (i != 0 and currChar = lastChar)
-        output = output + ' ';
+      lastChar = input.charAt(i);
+      if (i != 0 && currChar == lastChar)
+        output = output + ' '; //put a space to "pause" between identical characters
       
       switch (currChar) {
         case 'a':
@@ -52,10 +54,10 @@ class T9spelling {
         case 'g':
           output = output + "4";
           break;
-        case 'h';
+        case 'h':
           output = output + "44";
           break;
-        case 'i';
+        case 'i':
           output = output + "444";
           break;
         case 'j':
@@ -110,12 +112,13 @@ class T9spelling {
           output = output + "9999";
           break;
         case ' ':
-          output = output + "0"
+          output = output + "0";
           break;
         default: 
           //should not happen unless the input is bad
           break;
       }
+      lastChar = currChar;
     }   
     return output;
   }
