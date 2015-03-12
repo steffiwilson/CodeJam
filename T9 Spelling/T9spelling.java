@@ -17,6 +17,8 @@ class T9spelling {
         String currentLine = reader.readLine();
         String currentLineConverted = convertToT9(currentLine);
         System.out.println("Case #" + currentCase + ": " + currentLineConverted);
+        
+        currentCase++;
       }
     } catch (IOException e) {
 	  e.printStackTrace();
