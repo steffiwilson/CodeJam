@@ -27,10 +27,10 @@ class T9spelling {
 
   public static String convertToT9(String input) {
     char currChar = ' ';
-    char lastChar;
+    char lastChar = ' ';
     String output = "";
     for (int i = 0; i < input.length(); i++) {
-      lastChar = input.charAt(i);
+      currChar = input.charAt(i);
       if (i != 0 && currChar == lastChar)
         output = output + ' '; //put a space to "pause" between identical characters
       
