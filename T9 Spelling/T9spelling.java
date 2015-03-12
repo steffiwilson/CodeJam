@@ -27,100 +27,234 @@ class T9spelling {
 
   public static String convertToT9(String input) {
     char currChar = ' ';
-    char lastChar = ' ';
+    int lastNumberKeyPressed = 1;
     String output = "";
     for (int i = 0; i < input.length(); i++) {
       currChar = input.charAt(i);
-      if (i != 0 && currChar == lastChar)
-        output = output + ' '; //put a space to "pause" between identical characters
+      //if (i != 0 && currChar == lastChar)
+      //  output = output + ' '; //put a space to "pause" between identical characters
       
       switch (currChar) {
         case 'a':
-          output = output + "2";
+          if (lastNumberKeyPressed == 2)
+            output = output + " 2";
+          else
+            output = output + "2";
+          lastNumberKeyPressed = 2;
           break;
+          
         case 'b':
-          output = output + "22";
+          if (lastNumberKeyPressed == 2)
+            output = output + " 22";
+          else
+            output = output + "22";
+          lastNumberKeyPressed = 2;
           break;
+          
         case 'c':
-          output = output + "222";
+          if (lastNumberKeyPressed == 2)
+            output = output + " 222";
+          else  
+            output = output + "222";
+          lastNumberKeyPressed = 2;
           break;
+          
         case 'd':
-          output = output + "3";
+          if (lastNumberKeyPressed == 3)
+            output = output + " 3";
+          else 
+            output = output + "3";
+          lastNumberKeyPressed = 3;
           break;
+          
         case 'e':
-          output = output + "33";
+          if (lastNumberKeyPressed == 3)
+            output = output + " 33";
+          else 
+            output = output + "33";
+          lastNumberKeyPressed = 3;
           break;
+          
         case 'f':
-          output = output + "333";
+          if (lastNumberKeyPressed == 3)
+            output = output + " 333";
+          else
+            output = output + "333";
+          lastNumberKeyPressed = 3;
           break;
+          
         case 'g':
-          output = output + "4";
+          if (lastNumberKeyPressed == 4)
+            output = output + " 4";
+          else
+            output = output + "4";
+          lastNumberKeyPressed = 4;
           break;
+          
         case 'h':
-          output = output + "44";
+          if (lastNumberKeyPressed == 4)
+            output = output + " 44";
+          else
+            output = output + "44";
+          lastNumberKeyPressed = 4;
           break;
+          
         case 'i':
-          output = output + "444";
+          if (lastNumberKeyPressed == 4)
+            output = output + " 444";
+          else
+            output = output + "444";
+          lastNumberKeyPressed = 4;
           break;
+          
         case 'j':
-          output = output + "5";
+          if (lastNumberKeyPressed == 5)
+            output = output + " 5";
+          else 
+            output = output + "5";
+          lastNumberKeyPressed = 5;
           break;
+          
         case 'k':
-          output = output + "55";
+          if (lastNumberKeyPressed == 5)
+            output = output + " 55";
+          else  
+            output = output + "55";
+          lastNumberKeyPressed = 5;
           break;
+          
         case 'l':
-          output = output + "555";
+          if (lastNumberKeyPressed == 5)
+            output = output + " 555";
+          else 
+            output = output + "555";
+          lastNumberKeyPressed = 5;
           break;
+          
         case 'm':
-          output = output + "6";
+          if (lastNumberKeyPressed == 6)
+            output = output + " 6";
+          else  
+            output = output + "6";
+          lastNumberKeyPressed = 6;
           break;
+          
         case 'n':
-          output = output + "66";
+          if (lastNumberKeyPressed == 6)
+            output = output + " 66";
+          else
+            output = output + "66";
+          lastNumberKeyPressed = 6;
           break;
+          
         case 'o':
-          output = output + "666";
+          if (lastNumberKeyPressed == 6)
+            output = output + " 666";
+          else
+            output = output + "666";
+          lastNumberKeyPressed = 6;
           break;
+          
         case 'p':
-          output = output + "7";
+          if (lastNumberKeyPressed == 7)
+            output = output + " 7";
+          else
+            output = output + "7";
+          lastNumberKeyPressed = 7;
           break;
+          
         case 'q':
-          output = output + "77";
+          if (lastNumberKeyPressed == 7)
+            output = output + " 77";
+          else
+            output = output + "77";
+          lastNumberKeyPressed = 7;
           break;
+          
         case 'r':
-          output = output + "777";
+          if (lastNumberKeyPressed == 7)
+            output = output + "777";
+          else
+            output = output + "777";
+          lastNumberKeyPressed = 7;
           break;
+          
         case 's':
-          output = output + "7777";
+          if (lastNumberKeyPressed == 7)
+            output = output + " 7777";
+          else
+            output = output + "7777";
+          lastNumberKeyPressed = 7;
           break;
+          
         case 't':
-          output = output + "8";
+          if (lastNumberKeyPressed == 8)
+            output = output + " 8";
+          else
+            output = output + "8";
+          lastNumberKeyPressed = 8;
           break;
+          
         case 'u':
-          output = output + "88";
+          if (lastNumberKeyPressed == 8)
+            output = output + " 88";
+          else
+            output = output + "88";
+          lastNumberKeyPressed = 8;
           break;
+          
         case 'v':
-          output = output + "888";
+          if (lastNumberKeyPressed == 8)
+            output = output + " 888";
+          else
+            output = output + "888";
+          lastNumberKeyPressed = 8;
           break;
+          
         case 'w':
-          output = output + "9";
+          if (lastNumberKeyPressed == 9)
+            output = output + " 9";
+          else
+            output = output + "9";
+          lastNumberKeyPressed = 9;
           break;
+          
         case 'x':
-          output = output + "99";
+          if (lastNumberKeyPressed == 9)
+            output = output + " 99";
+          else
+            output = output + "99";
+          lastNumberKeyPressed = 9;
           break;
+          
         case 'y':
-          output = output + "999";
+          if (lastNumberKeyPressed == 9)
+            output = output + " 999";
+          else
+            output = output + "999";
+          lastNumberKeyPressed = 9;
           break;
+          
         case 'z':
-          output = output + "9999";
+          if (lastNumberKeyPressed == 9)
+            output = output + " 9999";
+          else
+            output = output + "9999";
+          lastNumberKeyPressed = 9;
           break;
+          
         case ' ':
-          output = output + "0";
+          if (lastNumberKeyPressed == 0)
+            output = output + " 0";
+          else
+            output = output + "0";
+          lastNumberKeyPressed = 0;
           break;
+          
         default: 
           //should not happen unless the input is bad
           break;
       }
-      lastChar = currChar;
     }   
     return output;
   }
