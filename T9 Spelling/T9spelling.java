@@ -173,7 +173,7 @@ class T9spelling {
           
         case 'r':
           if (lastNumberKeyPressed == 7)
-            output = output + "777";
+            output = output + " 777";
           else
             output = output + "777";
           lastNumberKeyPressed = 7;
